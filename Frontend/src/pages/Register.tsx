@@ -53,19 +53,20 @@ const Register = () => {
 
   const mutation = useMutationWithLoading(apiClient.register, {
     onSuccess: async () => {
-      showToast({ 
-        title: "Registration Successful", 
-        description: "Your account has been created successfully! Welcome to MernHolidays.",
-        type: "SUCCESS" 
+      showToast({
+        title: "Registration Successful",
+        description:
+          "Your account has been created successfully! Welcome to MernHolidays.",
+        type: "SUCCESS",
       });
       await queryClient.invalidateQueries("validateToken");
       navigate("/");
     },
     onError: (error: Error) => {
-      showToast({ 
-        title: "Registration Failed", 
+      showToast({
+        title: "Registration Failed",
         description: error.message,
-        type: "ERROR" 
+        type: "ERROR",
       });
     },
     loadingMessage: "Creating your account...",

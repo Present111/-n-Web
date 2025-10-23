@@ -30,12 +30,14 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <div className="flex flex-col items-center space-y-4">
           {/* Spinner */}
           <div className="relative">
-            <Loader2 className={`${sizeClasses[size]} animate-spin text-primary-600`} />
+            <Loader2
+              className={`${sizeClasses[size]} animate-spin text-primary-600`}
+            />
             {showHotelIcon && (
               <Hotel className="absolute inset-0 m-auto w-4 h-4 text-primary-500 animate-pulse" />
             )}
           </div>
-          
+
           {/* Message */}
           <div className="space-y-2">
             <h3 className={`font-semibold text-gray-900 ${textSizes[size]}`}>
@@ -45,12 +47,18 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
               Please wait while we prepare everything for you...
             </p>
           </div>
-          
+
           {/* Decorative dots */}
           <div className="flex space-x-1">
             <div className="w-2 h-2 bg-primary-400 rounded-full animate-bounce"></div>
-            <div className="w-2 h-2 bg-primary-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-            <div className="w-2 h-2 bg-primary-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+            <div
+              className="w-2 h-2 bg-primary-500 rounded-full animate-bounce"
+              style={{ animationDelay: "0.1s" }}
+            ></div>
+            <div
+              className="w-2 h-2 bg-primary-600 rounded-full animate-bounce"
+              style={{ animationDelay: "0.2s" }}
+            ></div>
           </div>
         </div>
       </div>
