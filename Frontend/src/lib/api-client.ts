@@ -1,5 +1,5 @@
 import axios, { InternalAxiosRequestConfig } from "axios";
-import Cookies from "../../node_modules/@types/js-cookie";
+import Cookies from "js-cookie";
 
 // Define base URL based on environment
 const getBaseURL = () => {
