@@ -10,6 +10,7 @@ import mongoose from "mongoose";
 import morgan from "morgan";
 import swaggerUi from "swagger-ui-express";
 import authRoutes from "./routes/auth";
+import bookingsRoutes from "./routes/bookings";
 import userRoutes from "./routes/users";
 import { specs } from "./swagger";
 
@@ -142,6 +143,7 @@ app.get("/", (req: Request, res: Response) => {
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/bookings", bookingsRoutes);
 
 // Swagger API Documentation
 app.use(
